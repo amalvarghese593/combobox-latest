@@ -1,0 +1,348 @@
+/*ComboBox & ListBox Styling*/
+#root,
+.main_layoutGrid {
+  min-height: 100vh;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.top-0 {
+  top: 0;
+}
+.bottom-0 {
+  bottom: 0;
+}
+.left-0 {
+  left: 0;
+}
+.right-0 {
+  right: 0;
+}
+.put-y-0 {
+  top: 0;
+  bottom: 0;
+}
+.opactity-0\% {
+  opacity: 0;
+}
+.opactity-7\% {
+  opacity: 60%;
+}
+.cursor-default {
+  cursor: auto;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.select-none {
+  user-select: none;
+  -moz-user-select: none;
+}
+.w-full {
+  width: 100% !important;
+}
+.w-5 {
+  width: 1.25rem;
+}
+.h-5 {
+  height: 1.25rem;
+}
+.w-80 {
+  width: 20rem;
+}
+.max-h-60 {
+  max-height: 15rem;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.space-between {
+  justify-content: space-between;
+}
+.flex {
+  display: flex;
+}
+.right-0 {
+  right: 0px;
+}
+.inset-y-0 {
+  top: 0px;
+  bottom: 0px;
+}
+.text-gray-900 {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+.radius\:8 {
+  border-radius: 8px;
+}
+.bg-secondary {
+  background-color: var(--secondary) !important;
+}
+
+@media (min-width: 640px) {
+  .sm\:w-96 {
+    width: 24rem;
+  }
+  .sm\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+.hover\:outline:hover {
+  outline: 50px;
+  outline-style: dotted;
+  background-color: green;
+}
+
+.chip span:hover svg {
+  /* background-color: #efefef; */
+  cursor: pointer;
+}
+.hover\:light:hover {
+  border-radius: 50%;
+  background-color: #efefef;
+}
+/**
+ * ==============================================
+ * Dot Flashing
+ * ==============================================
+ */
+.flashing-anim {
+  position: absolute;
+  right: 32px;
+  height: 100%;
+  width: 50px;
+  top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot-flashing {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  animation: dotFlashing 1s infinite linear alternate;
+  animation-delay: 0.5s;
+}
+
+.dot-flashing::before,
+.dot-flashing::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+
+.dot-flashing::before {
+  left: -15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  animation: dotFlashing 1s infinite alternate;
+  animation-delay: 0s;
+}
+
+.dot-flashing::after {
+  left: 15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  animation: dotFlashing 1s infinite alternate;
+  animation-delay: 1s;
+}
+
+@keyframes dotFlashing {
+  0% {
+    background-color: #9880ff;
+  }
+  50%,
+  100% {
+    background-color: #ebe6ff;
+  }
+}
+
+.selected-item {
+  color: #9880ff;
+}
+.text-start {
+  text-align: start;
+}
+.reverse-position {
+  bottom: 100%;
+}
+.tags {
+  padding-top: 20px;
+}
+
+/*Listbox Styles*/
+.listbox-options,
+.combobox-list {
+  z-index: 11;
+  min-width: 170px;
+  width: max-content;
+  max-width: 100%;
+}
+.listbox-options > .active {
+  background-color: #43454c !important;
+}
+.combobox-list > .active {
+  background-color: #43454c !important;
+}
+.combobox-option {
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  cursor: pointer !important;
+}
+.combobox-option div {
+  width: 100%;
+}
+.combobox-option-state i {
+  font-size: 20px;
+  margin-top: 4px;
+  color: black;
+}
+.combobox-option.active-option,
+.combobox-option:hover,
+.combobox-option[aria-selected="true"] .fa-regular,
+.combobox-option[aria-selected="true"] {
+  color: var(--primary) !important;
+}
+
+.combo-wrapper .filter-button {
+  padding-top: 7px !important;
+  padding-bottom: 7px !important;
+}
+.filter-button.active {
+  color: #000;
+  border: 2px solid #f5f5f5 !important;
+  background-color: #f5f5f5 !important;
+}
+input[type="text"].filter-button:focus {
+  outline: none;
+  box-shadow: none;
+}
+.combobox-arrow {
+  outline: none;
+  border: 0;
+}
+.combo-wrapper input[type="text"]::placeholder {
+  color: var(--primary);
+}
+
+.listbox-options {
+  border: 1px solid #efefef;
+  border-radius: 8px;
+
+  overflow-y: auto;
+}
+
+.listbox-options.virtualized {
+  overflow-y: visible;
+}
+.listbox-options:not(.virtualized) {
+  overflow-y: auto;
+}
+
+.virutalized-list {
+  overflow-y: auto;
+  background-color: white;
+}
+
+.listbox-options,
+.virutalized-list {
+  min-height: 30px;
+  max-height: 280px;
+}
+
+.combobox-list .actions {
+  padding: 8px 16px;
+}
+.combobox-list .btn-light {
+  background-color: transparent;
+}
+
+.combobox-option:focus {
+  background-color: var(--primary);
+  color: white !important;
+}
+
+/* CHIPS_DESIGN */
+
+.chips {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+.chip,
+.chip ~ div > button {
+  display: inline-flex;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  min-width: 40px;
+  max-width: 100%;
+  min-height: 20px;
+  border: #dad4d4 1px solid;
+  background-color: transparent;
+  color: #212529 !important;
+  font-weight: 400;
+  padding: 4px 10px !important;
+  border-radius: 18px;
+  transition: all ease-in 320ms;
+  cursor: pointer;
+  text-decoration: none;
+  text-overflow: ellipsis;
+}
+.chip:not(:last-child) {
+  margin-right: 0.2em;
+}
+.chip:hover {
+  border: 1px solid #71b783;
+  text-decoration: none !important;
+}
+
+.r_chips {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.r_chip {
+  display: inline-flex;
+  align-items: center;
+  border: 0;
+  box-sizing: border-box;
+  font-size: 0.86rem;
+  padding: 0.2em 0.8em;
+  background-color: #e4ebe4;
+  border-radius: 0.2em;
+  color: var(--secondary);
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-right: 0.5em;
+}
+.is-active {
+  background-color: #ccc;
+}
