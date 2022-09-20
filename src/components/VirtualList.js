@@ -24,7 +24,7 @@ const ComboboxVirtualization = ({
   const handleClick = (e, val) => {
     e.stopPropagation();
     const itemIndex = selectedItems.findIndex(
-      (el) => getValue(el) === getValue(val)
+      (el) => getValue(el).toLowerCase() === getValue(val).toLowerCase()
     );
     if (itemIndex !== -1) {
       setSelectedItems((prev) => {

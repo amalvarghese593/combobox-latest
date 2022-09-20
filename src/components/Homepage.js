@@ -41,7 +41,7 @@ export const Homepage = () => {
         // apiCallInfo={apiCallOptions}
         // transformResponse={(res) => res.result}
         placeholder="Select skills"
-        virtualized={true}
+        virtualized
         // components={{ InputControl: TextInput }}
         creatable={(newSkill) => newSkill}
         // name="items"
